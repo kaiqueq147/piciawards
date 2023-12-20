@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pici awards</title>
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="icon" type="image/x-icon" href="./music/pici.ico" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
@@ -19,12 +20,13 @@
   </style>
 
   <body>
-    <audio id="pici" autoplay>
-      <source src="./music/pici_awards.mp3" type="audio/mp3" />
-    </audio>
-    <video class="video" src="./music/1213.mp4" loop autoplay></video>
-
     <div class="content">
+      <audio id="pici_audio" autoplay loop>
+        <source src="./music/pici_awards.mp3" type="audio/mp3" />
+      </audio>
+      <video id="pici_video" autoplay>
+        <source src="./music/1213.mp4" />
+      </video>
       <div class="time">
         <div class="anos-content">
           <h1 class="anos"></h1>
@@ -55,9 +57,6 @@
       </div>
     </div>
 
-    <script type="module" src="scripts/script.js">
-      let audio = document.getElementById("pici");
-      audio.volume = 0.1;
-    </script>
+    <script type="module" src="scripts/script.js"></script>
   </body>
 </html>
