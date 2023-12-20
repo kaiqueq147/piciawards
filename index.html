@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style>
+    .natal {
+      text-align: center;
+    }
+  </style>
+
+  <body>
+    <audio id="pici" autoplay>
+      <source src="./music/pici_awards.mp3" type="audio/mp3" />
+    </audio>
+    <video class="video" src="./music/1213.mp4" loop autoplay></video>
+
+    <div class="content">
+      <div class="time">
+        <div class="anos-content">
+          <h1 class="anos"></h1>
+          <span class="anos-text"></span>
+          <span class="ano-text"></span>
+        </div>
+        <div class="meses-content">
+          <h1 class="meses"></h1>
+          <span class="meses-text"></span>
+          <span class="mes-text"></span>
+        </div>
+        <div class="dias-content">
+          <h1 class="dias"></h1>
+          <span class="dias-text"></span>
+        </div>
+        <div class="horas-content">
+          <h1 class="horas"></h1>
+          <span class="horas-text"></span>
+        </div>
+        <div class="minutos-content">
+          <h1 class="minutos"></h1>
+          <span class="minutos-text"></span>
+        </div>
+        <div class="segundos-content">
+          <h1 class="segundos"></h1>
+          <span class="segundos-text"></span>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="scripts/script.js">
+      let audio = document.getElementById("pici");
+      audio.volume = 0.1;
+    </script>
+  </body>
+</html>
