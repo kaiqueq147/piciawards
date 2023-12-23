@@ -1,6 +1,6 @@
 import Countdownm from "./countdown.js";
 
-const diasPassados = new Countdownm("23 December 2023 23:00:00 GMT-0300");
+const diasPassados = new Countdownm("23 December 2023 20:00:00 GMT-0300");
 console.log(diasPassados.year);
 
 let month = 0;
@@ -22,6 +22,7 @@ while (month < diasPassados.total.month) {
 const meses = document.querySelector(".meses-text");
 const mes = document.querySelector(".meses-content");
 const ano = document.querySelector(".anos-content");
+const dias = document.querySelector(".dias-content");
 
 console.log(diasPassados.year);
 
@@ -39,9 +40,15 @@ setInterval(() => {
 
   $(".meses-text").innerText = `${month >= 2 ? "meses" : ""}`;
   $(".mes-text").innerText = `${month == 0 ? mes.classList.add("hidden") : ""}`;
-  $(".dias").innerText = `${
-    diasPassados.total.days % diaDoMes(data.getMonth() - 1, data.getFullYear())
+  const diasValue =
+    diasPassados.total.days % diaDoMes(data.getMonth() - 1, data.getFullYear());
+  $(".dias").innerText =
+    diasValue >= 1 ? diasValue : dias.classList.add("hidden");
+
+  $(".dias-text").innerText = `${
+    diasPassados.total.days == 1 ? "dia" : "dias"
   }`;
+
   $(".dias-text").innerText = `${
     diasPassados.total.days == 1 ? "dia" : "dias"
   }`;
